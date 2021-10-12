@@ -102,17 +102,10 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'wine' => App\GraphQL\Queries\WinesQuery::class,
+                'wines' => App\GraphQL\Queries\WinesQuery::class,
+                ]
             ],
-            'mutation' => [
-                // ExampleMutation::class,
-            ],
-            'types' => [
-                // ExampleType::class,
-            ],
-            'middleware' => [],
-            'method' => ['get', 'post'],
-        ],
     ],
 
     // The types available in the application. You can then access it from the
@@ -125,9 +118,7 @@ return [
     // ]
     //
     'types' => [
-        // ExampleType::class,
-        // ExampleRelationType::class,
-        // \Rebing\GraphQL\Support\UploadType::class,
+        'Wine' => App\GraphQL\Types\WineType::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request
